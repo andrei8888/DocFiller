@@ -18,9 +18,13 @@ import cereri
 def complet():
     informatii=validate.informatii
     var=cereri.var
+    no_val=1;
+    for i,sel in enumerate(var):
+        if sel.get()==1:
+            no_val=0
     if not bool(informatii):
         messagebox.showerror(title="Nu au fost salvate informatii", message="Alegeti mai intai poza cu buletinul pentru a valida informatiile!")
-    elif not bool(var):
+    elif not bool(var) or no_val:
         messagebox.showerror(title="Nu au fost selectate documentele", message="Selectati mai intai documentele!")
     else:
         cereri.fa_cereri(informatii,var)

@@ -27,7 +27,7 @@ var=[]
 def selecteaza_documente(root):
     global photoimg_ok1,var
     select_frame = Toplevel(root)
-    select_frame.title("Verifica informatiile")
+    select_frame.title("Selecteaza documentele")
     check=[]
     for i in range(len(tip_doc)):
         var.append(IntVar(select_frame,0))
