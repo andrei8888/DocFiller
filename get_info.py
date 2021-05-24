@@ -11,8 +11,6 @@ def clear_string(text):
     return text
 
 def get_text(img):
-    #cv2.imshow("z",img)
-    #cv2.waitKey(0)
     img=cv2.resize(img,(0,0),fx=3,fy=3)
     text=pytesseract.image_to_string(img,lang="ron")
     text=clear_string(text)

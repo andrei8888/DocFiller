@@ -14,6 +14,7 @@ except ImportError:
 from PIL import ImageTk, Image
 import validate
 import cereri
+import time
 
 def complet():
     informatii=validate.informatii

@@ -12,9 +12,9 @@ from functools import partial
 photoimg_ok1=0
 
 tip_doc=[
-    "Declarație de primire in spațiu",  #anexa12
-    "Declarație de locuire efectivă",   #anexa14
-    "Procură specială pentru depunere cerere si ridicarea actului de identitate" #procura
+    "Declarație de primire in spațiu",
+    "Declarație de locuire efectivă", 
+    "Procură specială pentru depunere cerere si ridicarea actului de identitate"
 ]
 
 title=[
