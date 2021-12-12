@@ -5,6 +5,7 @@ import numpy as np
 def canny(image):
     return cv2.Canny(image, 100, 200)
 
+
 def preprocesare(file):
     img = cv2.imread(file)
     gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
