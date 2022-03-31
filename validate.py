@@ -58,7 +58,7 @@ def validate_info(main, filename):
         "Data nastere": StringVar(img_frame),
     }
     mng_img = preproc.preprocesare(filename)
-    informatii = get_info.get_Informatii(mng_img, informatii)
+    informatii = get_info.get_informatii(mng_img, informatii)
     lung_min = {
         "Nume": 30,
         "Prenume": 35,

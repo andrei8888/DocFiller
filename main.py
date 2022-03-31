@@ -1,8 +1,11 @@
+from datetime import datetime
+
+from Persoana import Persoana
+
 try:
     from PIL import Image
 except ImportError:
     print("no")
-import os
 from tkinter import *
 from tkinter import ttk
 from tkinter import filedialog, messagebox
@@ -15,7 +18,6 @@ except ImportError:
 from PIL import ImageTk, Image
 import validate
 import cereri
-import time
 
 
 def complet():
@@ -74,5 +76,17 @@ def main():
     root.mainloop()
 
 
+def maintr():
+    p = Persoana()
+    p.nume = "Pop"
+    p.prenume = "Brusli"
+    p.cetatenie = "Romana / ROU"
+    p.loc_nastere.set_localitate("Husi", "Valsui")
+    p.domiciliu.set_domiciliu(("Husi", "Valsui"), ("Mihai", 3))
+    p.emis = "IDROU"
+    p.data_nastere = datetime(2022, 1, 1)
+    p.af()
+
+
 if __name__ == "__main__":
-    main()
+    maintr()

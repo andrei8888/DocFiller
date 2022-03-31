@@ -3,7 +3,9 @@ from pytesseract.pytesseract import Output
 import cv2
 import pytesseract
 
-pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract'
+pytesseract.pytesseract.tesseract_cmd = 'C:/Program Files/Tesseract-OCR/tesseract.exe'
+
+tessdata_dir_config = '--tessdata-dir "C:/Program Files/Tesseract-OCR/tessdata"'
 
 
 def clear_string(text):
@@ -14,7 +16,7 @@ def clear_string(text):
 
 def get_text(img):
     img = cv2.resize(img, (0, 0), fx=3, fy=3)
-    text = pytesseract.image_to_string(img, lang="ron")
+    text = pytesseract.image_to_string(img, lang="ron", config=tessdata_dir_config)
     text = clear_string(text)
     return text
 
